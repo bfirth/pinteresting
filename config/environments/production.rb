@@ -1,6 +1,15 @@
 Pinteresting::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+config.paperclip_defaults = {
+  :storage => :s3,
+  :s3_credentials => {
+    :bucket => ENV['omrp'],
+    :access_key_id => ENV['AKIAJJVYZYWOZFD2TCAQ'],
+    :secret_access_key => ENV['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']
+  }
+}
+
   # Code is not reloaded between requests.
   config.cache_classes = true
 
